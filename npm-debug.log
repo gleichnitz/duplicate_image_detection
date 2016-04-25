@@ -1,0 +1,1078 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'caman' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.0
+4 verbose install initial load of /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/package.json
+5 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/package.json
+6 silly cache add args [ 'caman', null ]
+7 verbose cache add spec caman
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'caman',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'caman',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed caman@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for caman
+11 info addNameTag [ 'caman', 'latest' ]
+12 silly mapToRegistry name caman
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/caman
+16 verbose addNameTag registry:https://registry.npmjs.org/caman not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/caman
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 10:04:53 PM
+20 verbose request id f3dad315bf83511d
+21 http request GET https://registry.npmjs.org/caman
+22 http 200 https://registry.npmjs.org/caman
+23 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 verbose headers   etag: '"2ASVMEXPENVAOQO2KM7PVRRGX"',
+23 verbose headers   'content-type': 'application/json',
+23 verbose headers   'cache-control': 'max-age=300',
+23 verbose headers   'content-length': '70287',
+23 verbose headers   'accept-ranges': 'bytes',
+23 verbose headers   date: 'Tue, 19 Apr 2016 02:04:54 GMT',
+23 verbose headers   via: '1.1 varnish',
+23 verbose headers   age: '0',
+23 verbose headers   connection: 'keep-alive',
+23 verbose headers   'x-served-by': 'cache-iad2144-IAD',
+23 verbose headers   'x-cache': 'MISS',
+23 verbose headers   'x-cache-hits': '0',
+23 verbose headers   'x-timer': 'S1461031494.008686,VS0,VE76',
+23 verbose headers   vary: 'Accept-Encoding' }
+24 silly get cb [ 200,
+24 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly get     etag: '"2ASVMEXPENVAOQO2KM7PVRRGX"',
+24 silly get     'content-type': 'application/json',
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     'content-length': '70287',
+24 silly get     'accept-ranges': 'bytes',
+24 silly get     date: 'Tue, 19 Apr 2016 02:04:54 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     age: '0',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-iad2144-IAD',
+24 silly get     'x-cache': 'MISS',
+24 silly get     'x-cache-hits': '0',
+24 silly get     'x-timer': 'S1461031494.008686,VS0,VE76',
+24 silly get     vary: 'Accept-Encoding' } ]
+25 verbose get saving caman to /Users/Gabriela/.npm/registry.npmjs.org/caman/.cache.json
+26 silly addNameTag next cb for caman with tag latest
+27 silly addNamed caman@4.1.2
+28 verbose addNamed "4.1.2" is a plain semver version for caman
+29 silly mapToRegistry name caman
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/caman
+33 verbose addRemoteTarball https://registry.npmjs.org/caman/-/caman-4.1.2.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/caman/-/caman-4.1.2.tgz',
+34 verbose addRemoteTarball   '68fb69dd62c6d89fe599d4f855193a0355c2d3c9' ]
+35 info retry fetch attempt 1 at 10:04:53 PM
+36 info attempt registry request try #1 at 10:04:53 PM
+37 http fetch GET https://registry.npmjs.org/caman/-/caman-4.1.2.tgz
+38 http fetch 200 https://registry.npmjs.org/caman/-/caman-4.1.2.tgz
+39 silly fetchAndShaCheck shasum 68fb69dd62c6d89fe599d4f855193a0355c2d3c9
+40 verbose addTmpTarball /var/folders/zb/8_jh1s_j3zj8db1w_r_nlcnm0000gn/T/npm-28126-7e0850ff/registry.npmjs.org/caman/-/caman-4.1.2.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for caman@4.1.2
+42 silly cache afterAdd caman@4.1.2
+43 verbose afterAdd /Users/Gabriela/.npm/caman/4.1.2/package/package.json not in flight; writing
+44 verbose afterAdd /Users/Gabriela/.npm/caman/4.1.2/package/package.json written
+45 silly install resolved [ { name: 'caman',
+45 silly install resolved     version: '4.1.2',
+45 silly install resolved     description: 'Javascript (Ca)nvas (Man)ipulation for NodeJS and the browser',
+45 silly install resolved     keywords:
+45 silly install resolved      [ 'canvas',
+45 silly install resolved        'image',
+45 silly install resolved        'manipulate',
+45 silly install resolved        'filter',
+45 silly install resolved        'image manipulation',
+45 silly install resolved        'editing' ],
+45 silly install resolved     homepage: 'http://camanjs.com',
+45 silly install resolved     author:
+45 silly install resolved      { name: 'Ryan LeFevre',
+45 silly install resolved        email: 'meltingice8917@gmail.com',
+45 silly install resolved        url: 'http://meltingice.net' },
+45 silly install resolved     engines: { node: '>= 0.6.18' },
+45 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+45 silly install resolved     main: './dist/caman.full.js',
+45 silly install resolved     repository: { type: 'git', url: 'http://github.com/meltingice/CamanJS.git' },
+45 silly install resolved     dependencies: { canvas: '*', fibers: '*' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { 'coffee-script': '>= 1.6.1',
+45 silly install resolved        docco: '0.6.2',
+45 silly install resolved        codo: '*',
+45 silly install resolved        jsmin: '*',
+45 silly install resolved        packer: '*',
+45 silly install resolved        mocha: '*',
+45 silly install resolved        chai: '*',
+45 silly install resolved        servedir: '*',
+45 silly install resolved        cli: '*',
+45 silly install resolved        'cli-table': '*',
+45 silly install resolved        karma: '*' },
+45 silly install resolved     scripts:
+45 silly install resolved      { test: './node_modules/mocha/bin/mocha --compilers coffee:coffee-script --reporter spec --globals Caman ./test/unit/*.coffee && ./node_modules/.bin/karma start --single-run',
+45 silly install resolved        examples: './node_modules/servedir/bin/servedir',
+45 silly install resolved        docs: 'codo',
+45 silly install resolved        'docs-server': 'codo --server' },
+45 silly install resolved     readme: '# About the Project\n\n[![Build Status](https://secure.travis-ci.org/meltingice/CamanJS.png)](http://travis-ci.org/meltingice/CamanJS)\n\nThe main focus of CamanJS is manipulating images using the HTML5 canvas and Javascript. It\'s a combination of a simple-to-use interface with advanced and efficient image/canvas editing techniques. It is also completely library independent and can be safely used next to jQuery, YUI, Scriptaculous, MooTools, etc.\n\nCamanJS is very easy to extend with new filters and plugins, and it comes with a wide array of image editing functionality, which is only growing as the community makes more plugins. All features that are not a part of the core CamanJS library are in a [separate plugins repository](https://github.com/meltingice/CamanJS-Plugins).\n\nFor more information, I highly recommend taking a look at the [official website](http://camanjs.com) where there is more comprehensive documentation and interactive demos. You can also [read the wiki](https://github.com/meltingice/CamanJS/wiki) for some basic information about the project and how to use it.\n\nCamanJS is written in [Coffeescript](http://coffeescript.org) as of version 3.0. **It works both in-browser and in NodeJS.**\n\n## Usage\n\nInclude one of the versions in the `dist/` folder, then you can run:\n\n```js\nCaman("#image-id", function () {\n  this.brightness(10);\n  this.contrast(20);\n  this.render(function () {\n    alert("Done!");\n  });\n});\n```\n\nCaman also supports modifying images via the `data-caman` HTML attribute. Simply separate each instruction with a space. Images with the `data-caman` attribute will automatically be modified at page load.\n\n```html\n<img data-caman="saturation(-10) brightness(20) vignette(\'10%\')" src="path/to/image.jpg">\n```\n\n### HiDPI Support\n\nVersion 4 introduces better support for HiDPI (Retina) displays. It allows you to specify a higher resolution replacement using HTML data attributes. Keep in mind, however, that higher resolution images take longer to render.\n\n**HTML data attributes**\n\n* `data-caman-hidpi`: URL to the high resolution replacement image\n* `data-caman-hidpi-disabled`: HiDPI support is enabled by default, so add this attribute if you wish to force disable it\n\n## Upgrading to Version 4\n\nThere is only 1 breaking change that occured with the version 4 release. When you initialize CamanJS with a canvas and an image, the parameter order has changed. It is now:\n\n``` javascript\nCaman("#canvas-id", "/path/to/image.png", function() {});\n```\n\nThis is in order to be more consistent with initialization, such that the "initialization object" is always the first parameter. Update your code accordingly.\n\n## Development\n\nIf you are a developer who is contributing directly to the project, there are some tools to help you out.\n\n### Building\n\nTo install all dependencies required for development, run `npm install -d`.\n\nBecause all plugins are in a separate repository, make sure you run:\n\n```\ngit submodule init && git submodule update\n```\n\nTo build, simply run `cake build`. The resulting files will be placed in the dist/ folder. Plugins will be automatically discovered and added to caman.full.js after the core library. You can also auto-compile when a file changes by using `cake watch`.\n\nIf you add any files to the core library, you will need to add them to the `coffeeFiles` array in the Cakefile. The point of this is so that order is preserved when generating the file JS file. Plugins do not need to be added to the Cakefile.\n\nYou will probably want to generate documentation if you make any changes. In addition to the normal requirements, you will also need the Python library Pygments.\n\nTo generate the documentation, run `cake docs`.\n\n## CDN JS Hosting\n\nCamanJS is hosted on CDN JS if you\'re looking for a CDN hosting solution. It is the full and minified version of the library, which means all plugins are included. Simply load CamanJS directly from [this URL](http://cdnjs.cloudflare.com/ajax/libs/camanjs/3.3.0/caman.full.min.js) for usage on your site.\n\n## NodeJS Compatibility\n\nCamanJS is fully compatible with NodeJS. The easiest way to install it is:\n\n```\nnpm install caman\n```\n\n**Saving from NodeJS**\n\nTo save your modified image in NodeJS, simply call the save() function **after** rendering is finished by passing a callback function to `render()`. Trying to save before rendering is finished will cause issues.\n\n``` javascript\nCaman = require(\'caman\').Caman;\n\nCaman("./path/to/file.jpg", function () {\n  this.brightness(40);\n  this.render(function () {\n    this.save("./output.png");\n  });\n});\n```\n\n## Testing\n\nTests for CamanJS run both in NodeJS and the browser.\n\n### NodeJS\n\nThe NodeJS tests use mocha as the test runner. The simplest way to run the test suite is by running `npm test`.\n\n### Browser\n\nThe browser tests are run by Karma. It will start up Chrome, Firefox, and Safari (if running OSX) in the background. You can minimize each of these browsers if desired. It will automatically run tests after CamanJS is recompiled by the Cakefile as well.\n\nYou can run Karma by running `karma start`, or you can do a single run with the NodeJS tests by running `npm test`.\n',
+45 silly install resolved     readmeFilename: 'README.md',
+45 silly install resolved     bugs: { url: 'https://github.com/meltingice/CamanJS/issues' },
+45 silly install resolved     _id: 'caman@4.1.2',
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '68fb69dd62c6d89fe599d4f855193a0355c2d3c9',
+45 silly install resolved        tarball: 'https://registry.npmjs.org/caman/-/caman-4.1.2.tgz' },
+45 silly install resolved     _from: 'caman@latest',
+45 silly install resolved     _npmVersion: '1.2.23',
+45 silly install resolved     _npmUser: { name: 'meltingice', email: 'meltingice8917@gmail.com' },
+45 silly install resolved     maintainers: [ [Object] ],
+45 silly install resolved     directories: {},
+45 silly install resolved     _shasum: '68fb69dd62c6d89fe599d4f855193a0355c2d3c9',
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/caman/-/caman-4.1.2.tgz' } ]
+46 info install caman@4.1.2 into /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+47 info installOne caman@4.1.2
+48 verbose installOne of caman to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage not in flight; installing
+49 verbose lock using /Users/Gabriela/.npm/_locks/caman-270d561f327ac021.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+50 silly install write writing caman 4.1.2 to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+51 verbose unbuild node_modules/caman
+52 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman is being purged from base /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+53 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+54 verbose tar unpack /Users/Gabriela/.npm/caman/4.1.2/package.tgz
+55 verbose tar unpacking to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+56 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman is being purged
+57 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 silly gunzTarPerm extractEntry package.json
+60 silly gunzTarPerm extractEntry .npmignore
+61 silly gunzTarPerm extractEntry README.md
+62 silly gunzTarPerm extractEntry LICENSE
+63 silly gunzTarPerm extractEntry script.js
+64 silly gunzTarPerm extractEntry karma.conf.js
+65 silly gunzTarPerm extractEntry .travis.yml
+66 silly gunzTarPerm extractEntry api/extra_list.html
+67 silly gunzTarPerm extractEntry api/LICENSE.html
+68 silly gunzTarPerm extractEntry api/assets/codo.js
+69 silly gunzTarPerm extractEntry api/assets/search_data.js
+70 silly gunzTarPerm extractEntry api/assets/codo.css
+71 silly gunzTarPerm extractEntry api/class_index.html
+72 silly gunzTarPerm extractEntry api/class_list.html
+73 silly gunzTarPerm extractEntry api/classes/Caman/IO.html
+74 silly gunzTarPerm extractEntry api/classes/Caman/Analyze.html
+75 silly gunzTarPerm extractEntry api/classes/Caman/Calculate.html
+76 silly gunzTarPerm extractEntry api/classes/Caman/Convert.html
+77 silly gunzTarPerm extractEntry api/classes/Caman/Event.html
+78 silly gunzTarPerm extractEntry api/classes/Caman/Filter.html
+79 silly gunzTarPerm extractEntry api/classes/Caman/Blender.html
+80 silly gunzTarPerm extractEntry api/classes/Caman/Layer.html
+81 silly gunzTarPerm extractEntry api/classes/Caman/Logger.html
+82 silly gunzTarPerm extractEntry api/classes/Caman/Pixel.html
+83 silly gunzTarPerm extractEntry api/classes/Caman/Plugin.html
+84 silly gunzTarPerm extractEntry api/classes/Caman/Renderer.html
+85 silly gunzTarPerm extractEntry api/classes/Caman/Store.html
+86 silly gunzTarPerm extractEntry api/classes/Caman.html
+87 silly gunzTarPerm extractEntry api/classes/CamanParser.html
+88 silly gunzTarPerm extractEntry api/classes/Module.html
+89 silly gunzTarPerm extractEntry api/classes/Util.html
+90 silly gunzTarPerm extractEntry api/README.md.html
+91 silly gunzTarPerm extractEntry api/file_list.html
+92 silly gunzTarPerm extractEntry api/files/core/filter.coffee.html
+93 silly gunzTarPerm extractEntry api/files/core/analyze.coffee.html
+94 silly gunzTarPerm extractEntry api/files/core/blender.coffee.html
+95 silly gunzTarPerm extractEntry api/files/core/calculate.coffee.html
+96 silly gunzTarPerm extractEntry api/files/core/caman.coffee.html
+97 silly gunzTarPerm extractEntry api/files/core/convert.coffee.html
+98 silly gunzTarPerm extractEntry api/files/core/event.coffee.html
+99 silly gunzTarPerm extractEntry api/files/core/autoload.coffee.html
+100 silly gunzTarPerm extractEntry api/files/core/io.coffee.html
+101 silly gunzTarPerm extractEntry api/files/core/layer.coffee.html
+102 silly gunzTarPerm extractEntry api/files/core/pixel.coffee.html
+103 silly gunzTarPerm extractEntry api/files/core/plugin.coffee.html
+104 silly gunzTarPerm extractEntry api/files/core/renderer.coffee.html
+105 silly gunzTarPerm extractEntry api/files/core/store.coffee.html
+106 silly gunzTarPerm extractEntry api/files/core/util.coffee.html
+107 silly gunzTarPerm extractEntry api/index.html
+108 silly gunzTarPerm extractEntry api/method_list.html
+109 silly gunzTarPerm extractEntry api/mixin_list.html
+110 silly gunzTarPerm extractEntry .gitmodules
+111 silly gunzTarPerm extractEntry dist/caman.full.js
+112 silly gunzTarPerm extractEntry dist/caman.full.min.js
+113 silly gunzTarPerm extractEntry dist/caman.full.pack.js
+114 silly gunzTarPerm extractEntry dist/caman.js
+115 silly gunzTarPerm extractEntry dist/caman.min.js
+116 silly gunzTarPerm extractEntry dist/caman.pack.js
+117 silly gunzTarPerm extractEntry dist/caman.coffee
+118 silly gunzTarPerm extractEntry dist/caman.full.coffee
+119 silly gunzTarPerm extractEntry dist/caman.full.map
+120 silly gunzTarPerm extractEntry dist/caman.map
+121 silly gunzTarPerm extractEntry Cakefile
+122 silly gunzTarPerm extractEntry libpeerconnection.log
+123 silly gunzTarPerm extractEntry output.jpg
+124 silly gunzTarPerm extractEntry .codoopts
+125 silly gunzTarPerm extractEntry proxies/caman_proxy.php
+126 silly gunzTarPerm extractEntry bower.json
+127 verbose write writing to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/package.json
+128 info preinstall caman@4.1.2
+129 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/package.json
+130 silly prepareForInstallMany adding canvas@* from caman dependencies
+131 silly prepareForInstallMany adding fibers@* from caman dependencies
+132 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/package.json
+133 silly cache add args [ 'canvas@*', null ]
+134 verbose cache add spec canvas@*
+135 silly cache add args [ 'fibers@*', null ]
+136 verbose cache add spec fibers@*
+137 silly cache add parsed spec Result {
+137 silly cache add   raw: 'canvas@*',
+137 silly cache add   scope: null,
+137 silly cache add   name: 'canvas',
+137 silly cache add   rawSpec: '*',
+137 silly cache add   spec: '*',
+137 silly cache add   type: 'range' }
+138 silly addNamed canvas@*
+139 verbose addNamed "*" is a valid semver range for canvas
+140 silly addNameRange { name: 'canvas', range: '*', hasData: false }
+141 silly mapToRegistry name canvas
+142 silly mapToRegistry using default registry
+143 silly mapToRegistry registry https://registry.npmjs.org/
+144 silly mapToRegistry uri https://registry.npmjs.org/canvas
+145 verbose addNameRange registry:https://registry.npmjs.org/canvas not in flight; fetching
+146 silly cache add parsed spec Result {
+146 silly cache add   raw: 'fibers@*',
+146 silly cache add   scope: null,
+146 silly cache add   name: 'fibers',
+146 silly cache add   rawSpec: '*',
+146 silly cache add   spec: '*',
+146 silly cache add   type: 'range' }
+147 silly addNamed fibers@*
+148 verbose addNamed "*" is a valid semver range for fibers
+149 silly addNameRange { name: 'fibers', range: '*', hasData: false }
+150 silly mapToRegistry name fibers
+151 silly mapToRegistry using default registry
+152 silly mapToRegistry registry https://registry.npmjs.org/
+153 silly mapToRegistry uri https://registry.npmjs.org/fibers
+154 verbose addNameRange registry:https://registry.npmjs.org/fibers not in flight; fetching
+155 verbose request uri https://registry.npmjs.org/canvas
+156 verbose request no auth needed
+157 info attempt registry request try #1 at 10:04:54 PM
+158 http request GET https://registry.npmjs.org/canvas
+159 verbose request uri https://registry.npmjs.org/fibers
+160 verbose request no auth needed
+161 info attempt registry request try #1 at 10:04:54 PM
+162 http request GET https://registry.npmjs.org/fibers
+163 http 200 https://registry.npmjs.org/fibers
+164 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+164 verbose headers   etag: '"7X5ATW0F53IFUHZ09MXDON8YD"',
+164 verbose headers   'content-type': 'application/json',
+164 verbose headers   'content-encoding': 'gzip',
+164 verbose headers   'cache-control': 'max-age=300',
+164 verbose headers   'content-length': '12338',
+164 verbose headers   'accept-ranges': 'bytes',
+164 verbose headers   date: 'Tue, 19 Apr 2016 02:04:55 GMT',
+164 verbose headers   via: '1.1 varnish',
+164 verbose headers   age: '168',
+164 verbose headers   connection: 'keep-alive',
+164 verbose headers   'x-served-by': 'cache-iad2129-IAD',
+164 verbose headers   'x-cache': 'HIT',
+164 verbose headers   'x-cache-hits': '2',
+164 verbose headers   'x-timer': 'S1461031495.011592,VS0,VE0',
+164 verbose headers   vary: 'Accept-Encoding' }
+165 silly get cb [ 200,
+165 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+165 silly get     etag: '"7X5ATW0F53IFUHZ09MXDON8YD"',
+165 silly get     'content-type': 'application/json',
+165 silly get     'content-encoding': 'gzip',
+165 silly get     'cache-control': 'max-age=300',
+165 silly get     'content-length': '12338',
+165 silly get     'accept-ranges': 'bytes',
+165 silly get     date: 'Tue, 19 Apr 2016 02:04:55 GMT',
+165 silly get     via: '1.1 varnish',
+165 silly get     age: '168',
+165 silly get     connection: 'keep-alive',
+165 silly get     'x-served-by': 'cache-iad2129-IAD',
+165 silly get     'x-cache': 'HIT',
+165 silly get     'x-cache-hits': '2',
+165 silly get     'x-timer': 'S1461031495.011592,VS0,VE0',
+165 silly get     vary: 'Accept-Encoding' } ]
+166 verbose get saving fibers to /Users/Gabriela/.npm/registry.npmjs.org/fibers/.cache.json
+167 silly addNameRange number 2 { name: 'fibers', range: '*', hasData: true }
+168 silly addNameRange versions [ 'fibers',
+168 silly addNameRange   [ '0.1.0',
+168 silly addNameRange     '0.1.1',
+168 silly addNameRange     '0.1.2',
+168 silly addNameRange     '0.1.3',
+168 silly addNameRange     '0.1.4',
+168 silly addNameRange     '0.1.6',
+168 silly addNameRange     '0.1.7',
+168 silly addNameRange     '0.1.8',
+168 silly addNameRange     '0.2.0',
+168 silly addNameRange     '0.2.1',
+168 silly addNameRange     '0.2.2',
+168 silly addNameRange     '0.2.3',
+168 silly addNameRange     '0.2.4',
+168 silly addNameRange     '0.2.5',
+168 silly addNameRange     '0.2.6',
+168 silly addNameRange     '0.5.0',
+168 silly addNameRange     '0.6.0',
+168 silly addNameRange     '0.5.1',
+168 silly addNameRange     '0.6.1',
+168 silly addNameRange     '0.6.2',
+168 silly addNameRange     '0.6.3',
+168 silly addNameRange     '0.6.4',
+168 silly addNameRange     '0.6.5',
+168 silly addNameRange     '0.6.6',
+168 silly addNameRange     '0.6.7',
+168 silly addNameRange     '0.6.8',
+168 silly addNameRange     '0.6.9',
+168 silly addNameRange     '1.0.0',
+168 silly addNameRange     '1.0.1',
+168 silly addNameRange     '1.0.2',
+168 silly addNameRange     '1.0.4',
+168 silly addNameRange     '1.0.5',
+168 silly addNameRange     '1.0.6-b',
+168 silly addNameRange     '1.0.7',
+168 silly addNameRange     '1.0.8',
+168 silly addNameRange     '1.0.9',
+168 silly addNameRange     '1.0.10' ] ]
+169 silly addNamed fibers@1.0.10
+170 verbose addNamed "1.0.10" is a plain semver version for fibers
+171 silly mapToRegistry name fibers
+172 silly mapToRegistry using default registry
+173 silly mapToRegistry registry https://registry.npmjs.org/
+174 silly mapToRegistry uri https://registry.npmjs.org/fibers
+175 verbose addRemoteTarball https://registry.npmjs.org/fibers/-/fibers-1.0.10.tgz not in flight; adding
+176 verbose addRemoteTarball [ 'https://registry.npmjs.org/fibers/-/fibers-1.0.10.tgz',
+176 verbose addRemoteTarball   '0ccea7287e5dafd2626c2c9d3f15113a1b5829cd' ]
+177 http 200 https://registry.npmjs.org/canvas
+178 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+178 verbose headers   etag: '"BLNRMR0FBR8NN0NPYCTA9KINO"',
+178 verbose headers   'content-type': 'application/json',
+178 verbose headers   'content-encoding': 'gzip',
+178 verbose headers   'cache-control': 'max-age=300',
+178 verbose headers   'content-length': '15725',
+178 verbose headers   'accept-ranges': 'bytes',
+178 verbose headers   date: 'Tue, 19 Apr 2016 02:04:55 GMT',
+178 verbose headers   via: '1.1 varnish',
+178 verbose headers   age: '248',
+178 verbose headers   connection: 'keep-alive',
+178 verbose headers   'x-served-by': 'cache-iad2121-IAD',
+178 verbose headers   'x-cache': 'HIT',
+178 verbose headers   'x-cache-hits': '1',
+178 verbose headers   'x-timer': 'S1461031495.010814,VS0,VE0',
+178 verbose headers   vary: 'Accept-Encoding' }
+179 silly get cb [ 200,
+179 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+179 silly get     etag: '"BLNRMR0FBR8NN0NPYCTA9KINO"',
+179 silly get     'content-type': 'application/json',
+179 silly get     'content-encoding': 'gzip',
+179 silly get     'cache-control': 'max-age=300',
+179 silly get     'content-length': '15725',
+179 silly get     'accept-ranges': 'bytes',
+179 silly get     date: 'Tue, 19 Apr 2016 02:04:55 GMT',
+179 silly get     via: '1.1 varnish',
+179 silly get     age: '248',
+179 silly get     connection: 'keep-alive',
+179 silly get     'x-served-by': 'cache-iad2121-IAD',
+179 silly get     'x-cache': 'HIT',
+179 silly get     'x-cache-hits': '1',
+179 silly get     'x-timer': 'S1461031495.010814,VS0,VE0',
+179 silly get     vary: 'Accept-Encoding' } ]
+180 verbose get saving canvas to /Users/Gabriela/.npm/registry.npmjs.org/canvas/.cache.json
+181 info retry fetch attempt 1 at 10:04:54 PM
+182 info attempt registry request try #1 at 10:04:54 PM
+183 http fetch GET https://registry.npmjs.org/fibers/-/fibers-1.0.10.tgz
+184 silly addNameRange number 2 { name: 'canvas', range: '*', hasData: true }
+185 silly addNameRange versions [ 'canvas',
+185 silly addNameRange   [ '0.0.1',
+185 silly addNameRange     '0.0.2',
+185 silly addNameRange     '0.0.3',
+185 silly addNameRange     '0.0.4',
+185 silly addNameRange     '0.0.5',
+185 silly addNameRange     '0.0.6',
+185 silly addNameRange     '0.0.7',
+185 silly addNameRange     '0.0.8',
+185 silly addNameRange     '0.1.0',
+185 silly addNameRange     '0.2.0',
+185 silly addNameRange     '0.2.1',
+185 silly addNameRange     '0.3.0',
+185 silly addNameRange     '0.3.1',
+185 silly addNameRange     '0.3.2',
+185 silly addNameRange     '0.3.3',
+185 silly addNameRange     '0.4.0',
+185 silly addNameRange     '0.4.1',
+185 silly addNameRange     '0.4.2',
+185 silly addNameRange     '0.4.3',
+185 silly addNameRange     '0.5.0',
+185 silly addNameRange     '0.5.1',
+185 silly addNameRange     '0.5.2',
+185 silly addNameRange     '0.5.3',
+185 silly addNameRange     '0.5.4',
+185 silly addNameRange     '0.6.0',
+185 silly addNameRange     '0.7.0',
+185 silly addNameRange     '0.7.1',
+185 silly addNameRange     '0.7.2',
+185 silly addNameRange     '0.7.3',
+185 silly addNameRange     '0.8.0',
+185 silly addNameRange     '0.8.1',
+185 silly addNameRange     '0.8.2',
+185 silly addNameRange     '0.8.3',
+185 silly addNameRange     '0.9.0',
+185 silly addNameRange     '0.10.0',
+185 silly addNameRange     '0.10.1',
+185 silly addNameRange     '0.10.2',
+185 silly addNameRange     '0.10.3',
+185 silly addNameRange     '0.11.0',
+185 silly addNameRange     '0.11.1',
+185 silly addNameRange     '0.11.2',
+185 silly addNameRange     '0.11.3',
+185 silly addNameRange     '0.12.0',
+185 silly addNameRange     '0.12.1',
+185 silly addNameRange     '0.13.0',
+185 silly addNameRange     '0.13.1',
+185 silly addNameRange     '1.0.0',
+185 silly addNameRange     '1.0.1',
+185 silly addNameRange     '1.0.2',
+185 silly addNameRange     '1.0.3',
+185 silly addNameRange     '1.0.4',
+185 silly addNameRange     '1.1.0',
+185 silly addNameRange     '1.1.1',
+185 silly addNameRange     '1.1.2',
+185 silly addNameRange     '1.1.3',
+185 silly addNameRange     '1.1.4',
+185 silly addNameRange     '1.1.5',
+185 silly addNameRange     '1.1.6',
+185 silly addNameRange     '1.2.0',
+185 silly addNameRange     '1.2.1',
+185 silly addNameRange     '1.2.2',
+185 silly addNameRange     '1.2.3',
+185 silly addNameRange     '1.2.4',
+185 silly addNameRange     '1.2.5',
+185 silly addNameRange     '1.2.6',
+185 silly addNameRange     '1.2.7',
+185 silly addNameRange     '1.2.8',
+185 silly addNameRange     '1.2.9',
+185 silly addNameRange     '1.2.10',
+185 silly addNameRange     '1.2.11',
+185 silly addNameRange     '1.3.0',
+185 silly addNameRange     '1.3.1',
+185 silly addNameRange     '1.3.2',
+185 silly addNameRange     '1.3.3',
+185 silly addNameRange     '1.3.4',
+185 silly addNameRange     '1.3.5',
+185 silly addNameRange     '1.3.6',
+185 silly addNameRange     '1.3.7',
+185 silly addNameRange     '1.3.8',
+185 silly addNameRange     '1.3.9',
+185 silly addNameRange     '1.3.10',
+185 silly addNameRange     '1.3.11',
+185 silly addNameRange     '1.3.12' ] ]
+186 silly addNamed canvas@1.3.12
+187 verbose addNamed "1.3.12" is a plain semver version for canvas
+188 silly mapToRegistry name canvas
+189 silly mapToRegistry using default registry
+190 silly mapToRegistry registry https://registry.npmjs.org/
+191 silly mapToRegistry uri https://registry.npmjs.org/canvas
+192 verbose addRemoteTarball https://registry.npmjs.org/canvas/-/canvas-1.3.12.tgz not in flight; adding
+193 verbose addRemoteTarball [ 'https://registry.npmjs.org/canvas/-/canvas-1.3.12.tgz',
+193 verbose addRemoteTarball   '0e6d7b78d6c9730cf1129d1138b28d6d52667e93' ]
+194 info retry fetch attempt 1 at 10:04:54 PM
+195 info attempt registry request try #1 at 10:04:54 PM
+196 http fetch GET https://registry.npmjs.org/canvas/-/canvas-1.3.12.tgz
+197 http fetch 200 https://registry.npmjs.org/fibers/-/fibers-1.0.10.tgz
+198 http fetch 200 https://registry.npmjs.org/canvas/-/canvas-1.3.12.tgz
+199 silly fetchAndShaCheck shasum 0e6d7b78d6c9730cf1129d1138b28d6d52667e93
+200 verbose addTmpTarball /var/folders/zb/8_jh1s_j3zj8db1w_r_nlcnm0000gn/T/npm-28126-7e0850ff/registry.npmjs.org/canvas/-/canvas-1.3.12.tgz not in flight; adding
+201 verbose addTmpTarball already have metadata; skipping unpack for canvas@1.3.12
+202 silly cache afterAdd canvas@1.3.12
+203 verbose afterAdd /Users/Gabriela/.npm/canvas/1.3.12/package/package.json not in flight; writing
+204 verbose afterAdd /Users/Gabriela/.npm/canvas/1.3.12/package/package.json written
+205 silly fetchAndShaCheck shasum 0ccea7287e5dafd2626c2c9d3f15113a1b5829cd
+206 verbose addTmpTarball /var/folders/zb/8_jh1s_j3zj8db1w_r_nlcnm0000gn/T/npm-28126-7e0850ff/registry.npmjs.org/fibers/-/fibers-1.0.10.tgz not in flight; adding
+207 verbose addTmpTarball already have metadata; skipping unpack for fibers@1.0.10
+208 silly cache afterAdd fibers@1.0.10
+209 verbose afterAdd /Users/Gabriela/.npm/fibers/1.0.10/package/package.json not in flight; writing
+210 verbose afterAdd /Users/Gabriela/.npm/fibers/1.0.10/package/package.json written
+211 silly install resolved [ { name: 'canvas',
+211 silly install resolved     description: 'Canvas graphics API backed by Cairo',
+211 silly install resolved     version: '1.3.12',
+211 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+211 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+211 silly install resolved     keywords:
+211 silly install resolved      [ 'canvas',
+211 silly install resolved        'graphic',
+211 silly install resolved        'graphics',
+211 silly install resolved        'pixman',
+211 silly install resolved        'cairo',
+211 silly install resolved        'image',
+211 silly install resolved        'images',
+211 silly install resolved        'pdf' ],
+211 silly install resolved     homepage: 'https://github.com/Automattic/node-canvas',
+211 silly install resolved     repository:
+211 silly install resolved      { type: 'git',
+211 silly install resolved        url: 'git://github.com/Automattic/node-canvas.git' },
+211 silly install resolved     scripts:
+211 silly install resolved      { prebenchmark: 'node-gyp build',
+211 silly install resolved        benchmark: 'node benchmarks/run.js',
+211 silly install resolved        pretest: 'node-gyp build',
+211 silly install resolved        test: 'mocha test/*.test.js',
+211 silly install resolved        'pretest-server': 'node-gyp build',
+211 silly install resolved        'test-server': 'node test/server.js',
+211 silly install resolved        install: 'node-gyp rebuild' },
+211 silly install resolved     dependencies: { nan: '^2.1.0' },
+211 silly install resolved     devDependencies:
+211 silly install resolved      { 'body-parser': '^1.13.3',
+211 silly install resolved        express: '^4.13.2',
+211 silly install resolved        jade: '^1.11.0',
+211 silly install resolved        mocha: '*' },
+211 silly install resolved     engines: { node: '>=0.8.0' },
+211 silly install resolved     main: './lib/canvas.js',
+211 silly install resolved     license: 'MIT',
+211 silly install resolved     gypfile: true,
+211 silly install resolved     gitHead: 'a3492e3c3355b13433e1a3ddd5197f8bfa90f26c',
+211 silly install resolved     bugs: { url: 'https://github.com/Automattic/node-canvas/issues' },
+211 silly install resolved     _id: 'canvas@1.3.12',
+211 silly install resolved     _shasum: '0e6d7b78d6c9730cf1129d1138b28d6d52667e93',
+211 silly install resolved     _from: 'canvas@*',
+211 silly install resolved     _npmVersion: '3.6.0',
+211 silly install resolved     _nodeVersion: '5.6.0',
+211 silly install resolved     _npmUser: { name: 'linusu', email: 'linus@folkdatorn.se' },
+211 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+211 silly install resolved     dist:
+211 silly install resolved      { shasum: '0e6d7b78d6c9730cf1129d1138b28d6d52667e93',
+211 silly install resolved        tarball: 'https://registry.npmjs.org/canvas/-/canvas-1.3.12.tgz' },
+211 silly install resolved     _npmOperationalInternal:
+211 silly install resolved      { host: 'packages-9-west.internal.npmjs.com',
+211 silly install resolved        tmp: 'tmp/canvas-1.3.12.tgz_1456821769858_0.6099298796616495' },
+211 silly install resolved     directories: {},
+211 silly install resolved     _resolved: 'https://registry.npmjs.org/canvas/-/canvas-1.3.12.tgz' },
+211 silly install resolved   { name: 'fibers',
+211 silly install resolved     version: '1.0.10',
+211 silly install resolved     description: 'Cooperative multi-tasking for Javascript',
+211 silly install resolved     keywords:
+211 silly install resolved      [ 'fiber',
+211 silly install resolved        'fibers',
+211 silly install resolved        'coroutine',
+211 silly install resolved        'thread',
+211 silly install resolved        'async',
+211 silly install resolved        'parallel',
+211 silly install resolved        'worker',
+211 silly install resolved        'future',
+211 silly install resolved        'promise' ],
+211 silly install resolved     homepage: 'https://github.com/laverdet/node-fibers',
+211 silly install resolved     author:
+211 silly install resolved      { name: 'Marcel Laverdet',
+211 silly install resolved        email: 'marcel@laverdet.com',
+211 silly install resolved        url: 'https://github.com/laverdet/' },
+211 silly install resolved     main: 'fibers',
+211 silly install resolved     scripts:
+211 silly install resolved      { install: 'node build.js || nodejs build.js',
+211 silly install resolved        test: 'node test.js || nodejs test.js' },
+211 silly install resolved     repository:
+211 silly install resolved      { type: 'git',
+211 silly install resolved        url: 'git://github.com/laverdet/node-fibers.git' },
+211 silly install resolved     license: 'MIT',
+211 silly install resolved     engines: { node: '>=0.5.2' },
+211 silly install resolved     gitHead: '4e31a39d35635251e8680301dccf7d186396f739',
+211 silly install resolved     bugs: { url: 'https://github.com/laverdet/node-fibers/issues' },
+211 silly install resolved     _id: 'fibers@1.0.10',
+211 silly install resolved     _shasum: '0ccea7287e5dafd2626c2c9d3f15113a1b5829cd',
+211 silly install resolved     _from: 'fibers@*',
+211 silly install resolved     _npmVersion: '2.14.4',
+211 silly install resolved     _nodeVersion: '4.1.1',
+211 silly install resolved     _npmUser: { name: 'laverdet', email: 'marcel.npm@laverdet.com' },
+211 silly install resolved     maintainers: [ [Object] ],
+211 silly install resolved     dist:
+211 silly install resolved      { shasum: '0ccea7287e5dafd2626c2c9d3f15113a1b5829cd',
+211 silly install resolved        tarball: 'https://registry.npmjs.org/fibers/-/fibers-1.0.10.tgz' },
+211 silly install resolved     _npmOperationalInternal:
+211 silly install resolved      { host: 'packages-5-east.internal.npmjs.com',
+211 silly install resolved        tmp: 'tmp/fibers-1.0.10.tgz_1456365159038_0.8597446731291711' },
+211 silly install resolved     directories: {},
+211 silly install resolved     _resolved: 'https://registry.npmjs.org/fibers/-/fibers-1.0.10.tgz' } ]
+212 info install canvas@1.3.12 into /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+213 info install fibers@1.0.10 into /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+214 info installOne canvas@1.3.12
+215 verbose installOne of canvas to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman not in flight; installing
+216 info installOne fibers@1.0.10
+217 verbose installOne of fibers to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman not in flight; installing
+218 verbose lock using /Users/Gabriela/.npm/_locks/canvas-8a71120acc9678a8.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+219 verbose lock using /Users/Gabriela/.npm/_locks/fibers-70a4cfbc6affe5e9.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+220 silly install write writing canvas 1.3.12 to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+221 silly install write writing fibers 1.0.10 to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+222 verbose unbuild node_modules/caman/node_modules/canvas
+223 verbose unbuild node_modules/caman/node_modules/fibers
+224 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas is being purged from base /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+225 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+226 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers is being purged from base /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+227 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+228 verbose tar unpack /Users/Gabriela/.npm/canvas/1.3.12/package.tgz
+229 verbose tar unpacking to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+230 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas is being purged
+231 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+232 verbose tar unpack /Users/Gabriela/.npm/fibers/1.0.10/package.tgz
+233 verbose tar unpacking to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+234 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers is being purged
+235 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+236 silly gunzTarPerm modes [ '755', '644' ]
+237 silly gunzTarPerm modes [ '755', '644' ]
+238 silly gunzTarPerm extractEntry package.json
+239 silly gunzTarPerm extractEntry package.json
+240 silly gunzTarPerm extractEntry .npmignore
+241 silly gunzTarPerm extractEntry index.js
+242 silly gunzTarPerm extractEntry .npmignore
+243 silly gunzTarPerm extractEntry README.md
+244 silly gunzTarPerm extractEntry Readme.md
+245 silly gunzTarPerm extractEntry binding.gyp
+246 silly gunzTarPerm extractEntry LICENSE
+247 silly gunzTarPerm extractEntry .travis.yml
+248 silly gunzTarPerm extractEntry quick-test.js
+249 silly gunzTarPerm extractEntry future.js
+250 silly gunzTarPerm extractEntry build.js
+251 silly gunzTarPerm extractEntry lib/bindings.js
+252 silly gunzTarPerm extractEntry lib/canvas.js
+253 silly gunzTarPerm extractEntry test.js
+254 silly gunzTarPerm extractEntry fibers.js
+255 silly gunzTarPerm extractEntry note.txt
+256 silly gunzTarPerm extractEntry binding.gyp
+257 silly gunzTarPerm extractEntry lib/context2d.js
+258 silly gunzTarPerm extractEntry lib/image.js
+259 silly gunzTarPerm extractEntry bin/.npmignore
+260 silly gunzTarPerm extractEntry bin/win32-x64-v8-4.6/fibers.node
+261 silly gunzTarPerm extractEntry lib/jpegstream.js
+262 silly gunzTarPerm extractEntry lib/pngstream.js
+263 silly gunzTarPerm extractEntry bin/darwin-ia32-v8-4.6/fibers.node
+264 silly gunzTarPerm extractEntry History.md
+265 silly gunzTarPerm extractEntry src/Image.cc
+266 silly gunzTarPerm extractEntry bin/darwin-x64-v8-4.5/fibers.node
+267 silly gunzTarPerm extractEntry bin/darwin-x64-v8-4.6/fibers.node
+268 silly gunzTarPerm extractEntry src/Canvas.cc
+269 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+270 silly gunzTarPerm extractEntry bin/linux-ia32-v8-4.5/fibers.node
+271 silly gunzTarPerm extractEntry bin/linux-ia32-v8-4.6/fibers.node
+272 silly gunzTarPerm extractEntry src/CanvasGradient.h
+273 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+274 silly gunzTarPerm extractEntry bin/darwin-ia32-v8-4.5/fibers.node
+275 silly gunzTarPerm extractEntry bin/linux-x64-v8-4.6/fibers.node
+276 silly gunzTarPerm extractEntry src/CanvasPattern.h
+277 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+278 silly gunzTarPerm extractEntry bin/repl
+279 silly gunzTarPerm extractEntry bin/win32-ia32-v8-4.5/fibers.node
+280 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+281 silly gunzTarPerm extractEntry src/FontFace.cc
+282 silly gunzTarPerm extractEntry src/FontFace.h
+283 silly gunzTarPerm extractEntry src/Canvas.h
+284 silly gunzTarPerm extractEntry bin/win32-ia32-v8-4.6/fibers.node
+285 silly gunzTarPerm extractEntry src/Image.h
+286 silly gunzTarPerm extractEntry src/ImageData.cc
+287 silly gunzTarPerm extractEntry src/ImageData.h
+288 silly gunzTarPerm extractEntry src/JPEGStream.h
+289 silly gunzTarPerm extractEntry src/PNG.h
+290 silly gunzTarPerm extractEntry src/Point.h
+291 silly gunzTarPerm extractEntry bin/win32-x64-v8-4.5/fibers.node
+292 silly gunzTarPerm extractEntry src/closure.h
+293 silly gunzTarPerm extractEntry src/color.cc
+294 silly gunzTarPerm extractEntry bin/linux-x64-v8-4.5/fibers.node
+295 silly gunzTarPerm extractEntry src/color.h
+296 silly gunzTarPerm extractEntry src/init.cc
+297 silly gunzTarPerm extractEntry src/coroutine.cc
+298 silly gunzTarPerm extractEntry util/has_lib.sh
+299 silly gunzTarPerm extractEntry src/coroutine.h
+300 silly gunzTarPerm extractEntry src/fibers.cc
+301 silly gunzTarPerm extractEntry src/libcoro/README
+302 silly gunzTarPerm extractEntry src/libcoro/LICENSE
+303 silly gunzTarPerm extractEntry src/libcoro/conftest.c
+304 silly gunzTarPerm extractEntry src/libcoro/coro.c
+305 silly gunzTarPerm extractEntry src/libcoro/coro.h
+306 silly gunzTarPerm extractEntry test/already-running.js
+307 silly gunzTarPerm extractEntry test/exit.js
+308 silly gunzTarPerm extractEntry test/fibonacci.js
+309 silly gunzTarPerm extractEntry test/finish-multiple.js
+310 silly gunzTarPerm extractEntry test/future-exception.js
+311 silly gunzTarPerm extractEntry test/exec.js
+312 silly gunzTarPerm extractEntry test/illegal-yield.js
+313 silly gunzTarPerm extractEntry test/pool.js
+314 silly gunzTarPerm extractEntry test/process-title.js
+315 silly gunzTarPerm extractEntry test/stack-overflow.js
+316 silly gunzTarPerm extractEntry test/stack-overflow2.js
+317 silly gunzTarPerm extractEntry test/current.js
+318 silly gunzTarPerm extractEntry test/stack-overflow3.js
+319 silly gunzTarPerm extractEntry test/child-process.js
+320 silly gunzTarPerm extractEntry test/started.js
+321 silly gunzTarPerm extractEntry test/bad-context.js
+322 silly gunzTarPerm extractEntry test/unwind.js
+323 silly gunzTarPerm extractEntry test/future.js
+324 verbose write writing to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/package.json
+325 info preinstall canvas@1.3.12
+326 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/package.json
+327 silly prepareForInstallMany adding nan@^2.1.0 from canvas dependencies
+328 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/package.json
+329 silly cache add args [ 'nan@^2.1.0', null ]
+330 verbose cache add spec nan@^2.1.0
+331 silly cache add parsed spec Result {
+331 silly cache add   raw: 'nan@^2.1.0',
+331 silly cache add   scope: null,
+331 silly cache add   name: 'nan',
+331 silly cache add   rawSpec: '^2.1.0',
+331 silly cache add   spec: '>=2.1.0 <3.0.0',
+331 silly cache add   type: 'range' }
+332 silly addNamed nan@>=2.1.0 <3.0.0
+333 verbose addNamed ">=2.1.0 <3.0.0" is a valid semver range for nan
+334 silly addNameRange { name: 'nan', range: '>=2.1.0 <3.0.0', hasData: false }
+335 silly mapToRegistry name nan
+336 silly mapToRegistry using default registry
+337 silly mapToRegistry registry https://registry.npmjs.org/
+338 silly mapToRegistry uri https://registry.npmjs.org/nan
+339 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+340 verbose request uri https://registry.npmjs.org/nan
+341 verbose request no auth needed
+342 info attempt registry request try #1 at 10:04:54 PM
+343 verbose etag "7Y2U1A5TWU1O0YTKGMD4FB8ZN"
+344 http request GET https://registry.npmjs.org/nan
+345 verbose write writing to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers/package.json
+346 info preinstall fibers@1.0.10
+347 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers/package.json
+348 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers/package.json
+349 silly install resolved []
+350 verbose about to build /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+351 info build /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+352 info linkStuff fibers@1.0.10
+353 silly linkStuff fibers@1.0.10 has /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules as its parent node_modules
+354 verbose linkBins fibers@1.0.10
+355 verbose linkMans fibers@1.0.10
+356 verbose rebuildBundles fibers@1.0.10
+357 info install fibers@1.0.10
+358 verbose unsafe-perm in lifecycle true
+359 http 200 https://registry.npmjs.org/nan
+360 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+360 verbose headers   etag: '"BAF0CH6FX7ZGID84VMUQ15OTR"',
+360 verbose headers   'content-type': 'application/json',
+360 verbose headers   'content-encoding': 'gzip',
+360 verbose headers   'cache-control': 'max-age=300',
+360 verbose headers   'content-length': '7941',
+360 verbose headers   'accept-ranges': 'bytes',
+360 verbose headers   date: 'Tue, 19 Apr 2016 02:04:55 GMT',
+360 verbose headers   via: '1.1 varnish',
+360 verbose headers   age: '289',
+360 verbose headers   connection: 'keep-alive',
+360 verbose headers   'x-served-by': 'cache-iad2134-IAD',
+360 verbose headers   'x-cache': 'HIT',
+360 verbose headers   'x-cache-hits': '11',
+360 verbose headers   'x-timer': 'S1461031495.349320,VS0,VE0',
+360 verbose headers   vary: 'Accept-Encoding' }
+361 silly get cb [ 200,
+361 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+361 silly get     etag: '"BAF0CH6FX7ZGID84VMUQ15OTR"',
+361 silly get     'content-type': 'application/json',
+361 silly get     'content-encoding': 'gzip',
+361 silly get     'cache-control': 'max-age=300',
+361 silly get     'content-length': '7941',
+361 silly get     'accept-ranges': 'bytes',
+361 silly get     date: 'Tue, 19 Apr 2016 02:04:55 GMT',
+361 silly get     via: '1.1 varnish',
+361 silly get     age: '289',
+361 silly get     connection: 'keep-alive',
+361 silly get     'x-served-by': 'cache-iad2134-IAD',
+361 silly get     'x-cache': 'HIT',
+361 silly get     'x-cache-hits': '11',
+361 silly get     'x-timer': 'S1461031495.349320,VS0,VE0',
+361 silly get     vary: 'Accept-Encoding' } ]
+362 verbose get saving nan to /Users/Gabriela/.npm/registry.npmjs.org/nan/.cache.json
+363 silly addNameRange number 2 { name: 'nan', range: '>=2.1.0 <3.0.0', hasData: true }
+364 silly addNameRange versions [ 'nan',
+364 silly addNameRange   [ '0.3.0-wip',
+364 silly addNameRange     '0.3.0-wip2',
+364 silly addNameRange     '0.3.0',
+364 silly addNameRange     '0.3.1',
+364 silly addNameRange     '0.3.2',
+364 silly addNameRange     '0.4.0',
+364 silly addNameRange     '0.4.1',
+364 silly addNameRange     '0.4.2',
+364 silly addNameRange     '0.4.3',
+364 silly addNameRange     '0.4.4',
+364 silly addNameRange     '0.5.0',
+364 silly addNameRange     '0.5.1',
+364 silly addNameRange     '0.5.2',
+364 silly addNameRange     '0.6.0',
+364 silly addNameRange     '0.7.0',
+364 silly addNameRange     '0.7.1',
+364 silly addNameRange     '0.8.0',
+364 silly addNameRange     '1.0.0',
+364 silly addNameRange     '1.1.0',
+364 silly addNameRange     '1.1.1',
+364 silly addNameRange     '1.1.2',
+364 silly addNameRange     '1.2.0',
+364 silly addNameRange     '1.3.0',
+364 silly addNameRange     '1.4.0',
+364 silly addNameRange     '1.4.1',
+364 silly addNameRange     '1.5.0',
+364 silly addNameRange     '1.4.2',
+364 silly addNameRange     '1.4.3',
+364 silly addNameRange     '1.5.1',
+364 silly addNameRange     '1.5.2',
+364 silly addNameRange     '1.6.0',
+364 silly addNameRange     '1.5.3',
+364 silly addNameRange     '1.6.1',
+364 silly addNameRange     '1.6.2',
+364 silly addNameRange     '1.7.0',
+364 silly addNameRange     '1.8.0',
+364 silly addNameRange     '1.8.1',
+364 silly addNameRange     '1.8.2',
+364 silly addNameRange     '1.8.3',
+364 silly addNameRange     '1.8.4',
+364 silly addNameRange     '1.9.0',
+364 silly addNameRange     '2.0.0',
+364 silly addNameRange     '2.0.1',
+364 silly addNameRange     '2.0.2',
+364 silly addNameRange     '2.0.3',
+364 silly addNameRange     '2.0.4',
+364 silly addNameRange     '2.0.5',
+364 silly addNameRange     '2.0.6',
+364 silly addNameRange     '2.0.7',
+364 silly addNameRange     '2.0.8',
+364 silly addNameRange     '2.0.9',
+364 silly addNameRange     '2.1.0',
+364 silly addNameRange     '2.2.0',
+364 silly addNameRange     '2.2.1' ] ]
+365 silly addNamed nan@2.2.1
+366 verbose addNamed "2.2.1" is a plain semver version for nan
+367 silly mapToRegistry name nan
+368 silly mapToRegistry using default registry
+369 silly mapToRegistry registry https://registry.npmjs.org/
+370 silly mapToRegistry uri https://registry.npmjs.org/nan
+371 verbose addRemoteTarball https://registry.npmjs.org/nan/-/nan-2.2.1.tgz not in flight; adding
+372 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-2.2.1.tgz',
+372 verbose addRemoteTarball   'd68693f6b34bb41d66bc68b3a4f9defc79d7149b' ]
+373 info retry fetch attempt 1 at 10:04:54 PM
+374 info attempt registry request try #1 at 10:04:54 PM
+375 http fetch GET https://registry.npmjs.org/nan/-/nan-2.2.1.tgz
+376 http fetch 200 https://registry.npmjs.org/nan/-/nan-2.2.1.tgz
+377 silly fetchAndShaCheck shasum d68693f6b34bb41d66bc68b3a4f9defc79d7149b
+378 verbose addTmpTarball /var/folders/zb/8_jh1s_j3zj8db1w_r_nlcnm0000gn/T/npm-28126-7e0850ff/registry.npmjs.org/nan/-/nan-2.2.1.tgz not in flight; adding
+379 verbose addTmpTarball already have metadata; skipping unpack for nan@2.2.1
+380 silly cache afterAdd nan@2.2.1
+381 verbose afterAdd /Users/Gabriela/.npm/nan/2.2.1/package/package.json not in flight; writing
+382 verbose afterAdd /Users/Gabriela/.npm/nan/2.2.1/package/package.json written
+383 silly install resolved [ { name: 'nan',
+383 silly install resolved     version: '2.2.1',
+383 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+383 silly install resolved     main: 'include_dirs.js',
+383 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+383 silly install resolved     scripts:
+383 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+383 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+383 silly install resolved        docs: 'doc/.build.sh' },
+383 silly install resolved     contributors:
+383 silly install resolved      [ [Object],
+383 silly install resolved        [Object],
+383 silly install resolved        [Object],
+383 silly install resolved        [Object],
+383 silly install resolved        [Object],
+383 silly install resolved        [Object],
+383 silly install resolved        [Object] ],
+383 silly install resolved     devDependencies:
+383 silly install resolved      { bindings: '~1.2.1',
+383 silly install resolved        commander: '^2.8.1',
+383 silly install resolved        glob: '^5.0.14',
+383 silly install resolved        'node-gyp': '~3.0.1',
+383 silly install resolved        tap: '~0.7.1',
+383 silly install resolved        xtend: '~4.0.0' },
+383 silly install resolved     license: 'MIT',
+383 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+383 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+383 silly install resolved     _id: 'nan@2.2.1',
+383 silly install resolved     _shasum: 'd68693f6b34bb41d66bc68b3a4f9defc79d7149b',
+383 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.2.1.tgz',
+383 silly install resolved     _from: 'nan@>=2.1.0 <3.0.0',
+383 silly install resolved     _npmVersion: '3.3.6',
+383 silly install resolved     _nodeVersion: '5.0.0',
+383 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+383 silly install resolved     dist:
+383 silly install resolved      { shasum: 'd68693f6b34bb41d66bc68b3a4f9defc79d7149b',
+383 silly install resolved        tarball: 'https://registry.npmjs.org/nan/-/nan-2.2.1.tgz' },
+383 silly install resolved     maintainers: [ [Object], [Object] ],
+383 silly install resolved     _npmOperationalInternal:
+383 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+383 silly install resolved        tmp: 'tmp/nan-2.2.1.tgz_1459265439909_0.12396649201400578' },
+383 silly install resolved     directories: {} } ]
+384 info install nan@2.2.1 into /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+385 info installOne nan@2.2.1
+386 verbose installOne of nan to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas not in flight; installing
+387 verbose lock using /Users/Gabriela/.npm/_locks/nan-2a992b0ef5dd6856.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+388 silly install write writing nan 2.2.1 to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+389 verbose unbuild node_modules/caman/node_modules/canvas/node_modules/nan
+390 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan is being purged from base /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+391 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+392 verbose tar unpack /Users/Gabriela/.npm/nan/2.2.1/package.tgz
+393 verbose tar unpacking to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+394 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan is being purged
+395 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+396 silly gunzTarPerm modes [ '755', '644' ]
+397 silly gunzTarPerm extractEntry package.json
+398 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+399 silly gunzTarPerm extractEntry include_dirs.js
+400 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+401 silly gunzTarPerm extractEntry nan_converters.h
+402 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+403 silly gunzTarPerm extractEntry LICENSE.md
+404 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+405 silly gunzTarPerm extractEntry .dntrc
+406 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+407 silly gunzTarPerm extractEntry appveyor.yml
+408 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+409 silly gunzTarPerm extractEntry doc/new.md
+410 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+411 silly gunzTarPerm extractEntry doc/.build.sh
+412 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 493 ]
+413 silly gunzTarPerm extractEntry doc/buffers.md
+414 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+415 silly gunzTarPerm extractEntry doc/callback.md
+416 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+417 silly gunzTarPerm extractEntry doc/converters.md
+418 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+419 silly gunzTarPerm extractEntry doc/errors.md
+420 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+421 silly gunzTarPerm extractEntry doc/maybe_types.md
+422 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+423 silly gunzTarPerm extractEntry doc/methods.md
+424 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+425 silly gunzTarPerm extractEntry doc/asyncworker.md
+426 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+427 silly gunzTarPerm extractEntry doc/node_misc.md
+428 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+429 silly gunzTarPerm extractEntry doc/object_wrappers.md
+430 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 420 ]
+431 silly gunzTarPerm extractEntry doc/persistent.md
+432 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+433 silly gunzTarPerm extractEntry doc/scopes.md
+434 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+435 silly gunzTarPerm extractEntry doc/script.md
+436 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+437 silly gunzTarPerm extractEntry doc/string_bytes.md
+438 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+439 silly gunzTarPerm extractEntry doc/v8_internals.md
+440 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+441 silly gunzTarPerm extractEntry doc/v8_misc.md
+442 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+443 silly gunzTarPerm extractEntry nan.h
+444 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+445 silly gunzTarPerm extractEntry nan_callbacks.h
+446 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+447 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+448 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+449 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+450 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+451 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+452 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+453 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+454 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+455 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+456 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+457 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+458 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+459 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+460 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+461 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+462 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+463 silly gunzTarPerm extractEntry nan_new.h
+464 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+465 silly gunzTarPerm extractEntry nan_object_wrap.h
+466 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+467 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+468 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+469 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+470 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+471 silly gunzTarPerm extractEntry nan_string_bytes.h
+472 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+473 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+474 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 420 ]
+475 silly gunzTarPerm extractEntry nan_weak.h
+476 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+477 silly gunzTarPerm extractEntry CHANGELOG.md
+478 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+479 silly gunzTarPerm extractEntry tools/package.json
+480 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+481 silly gunzTarPerm extractEntry tools/README.md
+482 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+483 silly gunzTarPerm extractEntry tools/1to2.js
+484 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+485 verbose write writing to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan/package.json
+486 info preinstall nan@2.2.1
+487 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan/package.json
+488 verbose readDependencies loading dependencies from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan/package.json
+489 silly install resolved []
+490 verbose about to build /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+491 info build /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+492 info linkStuff nan@2.2.1
+493 silly linkStuff nan@2.2.1 has /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules as its parent node_modules
+494 verbose linkBins nan@2.2.1
+495 verbose linkMans nan@2.2.1
+496 verbose rebuildBundles nan@2.2.1
+497 info install nan@2.2.1
+498 info postinstall nan@2.2.1
+499 verbose unlock done using /Users/Gabriela/.npm/_locks/nan-2a992b0ef5dd6856.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas/node_modules/nan
+500 verbose about to build /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+501 info build /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+502 info linkStuff canvas@1.3.12
+503 silly linkStuff canvas@1.3.12 has /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules as its parent node_modules
+504 verbose linkBins canvas@1.3.12
+505 verbose linkMans canvas@1.3.12
+506 verbose rebuildBundles canvas@1.3.12
+507 verbose rebuildBundles [ 'nan' ]
+508 info install canvas@1.3.12
+509 verbose unsafe-perm in lifecycle true
+510 info postinstall fibers@1.0.10
+511 verbose unlock done using /Users/Gabriela/.npm/_locks/fibers-70a4cfbc6affe5e9.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/fibers
+512 info canvas@1.3.12 Failed to exec install script
+513 verbose unlock done using /Users/Gabriela/.npm/_locks/canvas-8a71120acc9678a8.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+514 verbose about to build /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+515 verbose unlock done using /Users/Gabriela/.npm/_locks/caman-270d561f327ac021.lock for /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+516 verbose stack Error: canvas@1.3.12 install: `node-gyp rebuild`
+516 verbose stack Exit status 1
+516 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+516 verbose stack     at emitTwo (events.js:87:13)
+516 verbose stack     at EventEmitter.emit (events.js:172:7)
+516 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+516 verbose stack     at emitTwo (events.js:87:13)
+516 verbose stack     at ChildProcess.emit (events.js:172:7)
+516 verbose stack     at maybeClose (internal/child_process.js:821:16)
+516 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+517 verbose pkgid canvas@1.3.12
+518 verbose cwd /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+519 error Darwin 14.5.0
+520 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "caman"
+521 error node v4.3.0
+522 error npm  v2.14.12
+523 error code ELIFECYCLE
+524 error canvas@1.3.12 install: `node-gyp rebuild`
+524 error Exit status 1
+525 error Failed at the canvas@1.3.12 install script 'node-gyp rebuild'.
+525 error This is most likely a problem with the canvas package,
+525 error not with npm itself.
+525 error Tell the author that this fails on your system:
+525 error     node-gyp rebuild
+525 error You can get their info via:
+525 error     npm owner ls canvas
+525 error There is likely additional logging output above.
+526 verbose exit [ 1, true ]
+527 verbose unbuild node_modules/caman/node_modules/canvas
+528 info preuninstall canvas@1.3.12
+529 info uninstall canvas@1.3.12
+530 verbose unbuild rmStuff canvas@1.3.12 from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules
+531 verbose unbuild rmStuff in /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules
+532 info postuninstall canvas@1.3.12
+533 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas is being purged from base /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+534 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+535 silly vacuum-fs purging /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules/canvas
+536 silly vacuum-fs quitting because other entries in /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman/node_modules
+537 verbose unbuild node_modules/caman
+538 info preuninstall caman@4.1.2
+539 info uninstall caman@4.1.2
+540 verbose unbuild rmStuff caman@4.1.2 from /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules
+541 info postuninstall caman@4.1.2
+542 silly gentlyRm /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman is being purged from base /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage
+543 verbose gentlyRm don't care about contents; nuking /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+544 silly vacuum-fs purging /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules/caman
+545 silly vacuum-fs removing /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage/node_modules
+546 silly vacuum-fs finished vacuuming up to /Users/Gabriela/Dropbox/Documents/College Work/4 Senior Spring/COS 435/435 Project/Webpage

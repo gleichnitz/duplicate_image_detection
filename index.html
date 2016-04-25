@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title> Duplicate Image Detection </title>
+
+	<!-- Standard font -->
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300' rel='stylesheet' type='text/css'>
+
+
+	<!-- bootstrap -->
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ -->
+	<!-- custom stylesheet -->
+	<link rel="stylesheet" href="fake-bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="base.css" type="text/css" />
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="header col-md-12">
+			Image <div class="white"> Duplicate Detection </div> <br> 
+			Using Neural Networks
+		</div>
+
+		<div class="col-md-12 controls">
+			<div class="col-md-6 demo-title">
+				Image Manipulation Controls
+			</div>
+			<div class="col-md-1 edit-control">
+				Brightness
+			</div>
+			<div class="col-md-1 edit-control">
+				Shadows 
+			</div>
+			<div class="col-md-1 edit-control">
+				Color
+			</div>
+			<div class="col-md-1 edit-control">
+				Rotate
+			</div>
+		</div>
+		<div class="content col-md-12">
+			<div class="upload_photo col-md-4">
+				<div class="col-md-12">
+					<div class="photo-container">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<button type="button" class="button mini-button"> 
+						<input type="file" class="file-input" name="pic" accept="image/*"> 
+						Upload Photo 
+					</button>
+					<button type="button" class="button mini-button"> Get Random Photo </button>
+				</div>
+			</div>
+			<button type="button" class="button go col-md-1"> GO</button>
+			<div class="matches col-md-6">
+				<table class=" match-table col-md-12">
+					<tr>
+						<td class="match">
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 81%"></span>
+								</div>
+								<div class="percentage">
+									81%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 75%"></span>
+								</div>
+								<div class="percentage">
+									75%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 60%"></span>
+								</div>
+								<div class="percentage">
+									60%
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="match">
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 25%"></span>
+								</div>
+								<div class="percentage">
+									25%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 15%"></span>
+								</div>
+								<div class="percentage">
+									15%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 5%"></span>
+								</div>
+								<div class="percentage">
+									5%
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="more col-md-12">
+			<button class="mdl-button mdl-js-button mdl-button--fab" onClick="document.getElementById('explanation').scrollIntoView();"> 
+				<div class="down-arrow">  </div>
+			</button>
+		</div>
+		<div class="explanation col-md-12" id="explanation">
+			<div class="question">
+				Why is this important?
+			</div>
+			<div class="answer">
+				Because I rock
+			</div>
+			<div class="question">
+				Why is this important?
+			</div>
+			<div class="answer">
+				Because I rock
+			</div>
+		</div>
+		<div class="footer col-md-12">
+			Created by James Evans and Gabriela Leichnitz
+		</div>
+	</div>
+
+</body>
+</html>
