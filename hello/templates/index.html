@@ -1,48 +1,168 @@
-{% extends "base.html" %}
-{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-{% block content %}
+	<title> Duplicate Image Detection </title>
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="{% static 'lang-logo.png'%}">
-    </a>
-    <h1>Getting Started with Python on Heroku</h1>
-    <p>This is a sample Python application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-python"><span class="glyphicon glyphicon-flash"></span> Getting Started with Python</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/python-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link">Getting Started with Python on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/python-getting-started">Heroku Button</a> on the repository.</li>
+	<!-- Standard font -->
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300' rel='stylesheet' type='text/css'>
 
-        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/python-getting-started/blob/master/requirements.txt">requirements.txt file</a>.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started</a> guide to learn more!</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/django-app-configuration">Configuring Django Apps for Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
-</div>
-{% endblock %}
+
+	<!-- bootstrap -->
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ -->
+	<!-- custom stylesheet -->
+	<link rel="stylesheet" href="fake-bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="base.css" type="text/css" />
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="header col-md-12">
+			Image <div class="white"> Duplicate Detection </div> <br> 
+			Using Neural Networks
+		</div>
+
+		<div class="col-md-12 controls">
+			<div class="col-md-6 demo-title">
+				Image Manipulation Controls
+			</div>
+			<div class="col-md-1 edit-control">
+				Brightness
+			</div>
+			<div class="col-md-1 edit-control">
+				Shadows 
+			</div>
+			<div class="col-md-1 edit-control">
+				Color
+			</div>
+			<div class="col-md-1 edit-control">
+				Rotate
+			</div>
+		</div>
+		<div class="content col-md-12">
+			<div class="upload_photo col-md-4">
+				<div class="col-md-12">
+					<div class="photo-container">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<button type="button" class="button mini-button"> 
+						<input type="file" class="file-input" name="pic" accept="image/*"> 
+						Upload Photo 
+					</button>
+					<button type="button" class="button mini-button"> Get Random Photo </button>
+				</div>
+			</div>
+			<button type="button" class="button go col-md-1"> GO</button>
+			<div class="matches col-md-6">
+				<table class=" match-table col-md-12">
+					<tr>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 81%"></span>
+								</div>
+								<div class="percentage">
+									81%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 75%"></span>
+								</div>
+								<div class="percentage">
+									75%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 60%"></span>
+								</div>
+								<div class="percentage">
+									60%
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="match">
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 25%"></span>
+								</div>
+								<div class="percentage">
+									25%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 15%"></span>
+								</div>
+								<div class="percentage">
+									15%
+								</div>
+							</div>
+						</td>
+						<td class="match"> 
+							<div class="matchbox"> 
+							</div>
+							<div class="match-rate">
+								<div class="match-meter">
+								  <span style="width: 5%"></span>
+								</div>
+								<div class="percentage">
+									5%
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="more col-md-12">
+			<button class="mdl-button mdl-js-button mdl-button--fab" onClick="document.getElementById('explanation').scrollIntoView();"> 
+				<div class="down-arrow">  </div>
+			</button>
+		</div>
+		<div class="explanation col-md-12" id="explanation">
+			<div class="question">
+				Why is this important?
+			</div>
+			<div class="answer">
+				Because I rock
+			</div>
+			<div class="question">
+				Why is this important?
+			</div>
+			<div class="answer">
+				Because I rock
+			</div>
+		</div>
+		<div class="footer col-md-12">
+			Created by James Evans and Gabriela Leichnitz
+		</div>
+	</div>
+
+</body>
+</html>
