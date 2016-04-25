@@ -1,0 +1,8 @@
+{
+  "name": "Duplicate Image Detection",
+  "description": "An approach using neural networks.",
+  "image": "heroku/python",
+  "repository": "https://github.com/gleichnitz/duplicate_image_detection",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}
