@@ -48,6 +48,10 @@ table {
 	border: 2px #bbb solid;
 }
 
+.button:focus {
+    outline:none;
+}
+
 /*.file-upload {
   position: relative;
   overflow: hidden;
