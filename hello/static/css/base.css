@@ -77,7 +77,7 @@ table {
 }
 
 .down-arrow {
-	background-image: url("img/down-arrow.png");
+	background-image: url("../img/down-arrow.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	height: 35px;
