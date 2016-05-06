@@ -275,6 +275,10 @@ table {
   padding-top: 5px;
 }
 
+.demo-title {
+  margin-top: -8px;
+}
+
 /* CSS for sliding bars, image manipulation */
 
 .slider-fill {
