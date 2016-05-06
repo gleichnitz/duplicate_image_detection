@@ -8,6 +8,35 @@
 <link rel="stylesheet" type="text/css" href="{% static 'fake-bootstrap.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
   
+<script>
+
+	window.onload = function() {
+		var canvas = document.getElementById('big-photo');
+		context = canvas.getContext('2d');
+		base_image = new Image();
+	 	base_image.src = "{% static 'background.png' %}";
+	 	base_image.onload = function(){
+		   context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, 285, 285);
+		}
+ 		console.log(base_image.src);
+	}
+
+ 	function showImage(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            var canvas = document.getElementById('big-photo');
+			context = canvas.getContext('2d');
+
+            reader.onload = function (e) {
+            	base_image = new Image();
+            	base_image.src = e.target.result;
+		   		context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, canvas.width, canvas.height);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
 </head>
 
 <body>

@@ -37,11 +37,12 @@
 		<div class="upload_photo col-md-4">
 			<div class="col-md-12">
 				<div class="photo-container">
+					<canvas id="big-photo" > </canvas>
 				</div>
 			</div>
 			<div class="col-md-12">
 				<button type="button" class="button mini-button"> 
-					<input type="file" class="file-input" name="pic" accept="image/*"> 
+					<input type="file" class="file-input" name="pic" accept="image/*" onchange="showImage(this);"> 
 					Upload Photo 
 				</button>
 				<button type="button" class="button mini-button"> Get Random Photo </button>

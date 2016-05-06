@@ -186,11 +186,21 @@ table {
 
 .photo-container {
 	border: 2px solid #bbb;
-	background-color: white;
+  background-color: white;
 	height: 285px;
 	width: 285px;
 	margin: auto;
 	border-radius: 5px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+#big-photo {
+  flex-shrink:0;
+  min-width:100%;
+  min-height:100%;
 }
 
 .footer {
