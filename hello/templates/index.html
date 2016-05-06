@@ -11,18 +11,25 @@
 
 	<div class="col-md-12 controls">
 		<div class="col-md-6 demo-title">
-			Image Manipulation Controls
+			Image Manipulation Controls <br>
+			<div class="col-md-12 demo-description">
+				Use the controls on ther right to alter the image.
+			</div>
 		</div>
-		<div class="col-md-1 edit-control">
+		<div class="col-md-1 edit-control brightness">
+			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
 			Brightness
 		</div>
-		<div class="col-md-1 edit-control">
+		<div class="col-md-1 edit-control shadows">
+			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
 			Shadows 
 		</div>
-		<div class="col-md-1 edit-control">
+		<div class="col-md-1 edit-control color">
+			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
 			Color
 		</div>
-		<div class="col-md-1 edit-control">
+		<div class="col-md-1 edit-control rotate">
+			<img src="{% static 'rotate.png' %}" id="rotate-image"> <br>
 			Rotate
 		</div>
 	</div>
