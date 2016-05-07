@@ -8,6 +8,7 @@
 		Image <div class="white"> Duplicate Detection </div>  
 		Using Neural Networks
 	</div>
+	<input id="image_url" value="yo"> </input>
 
 	<div class="col-md-12 controls">
 		<div class="col-md-6 demo-title">
@@ -16,8 +17,8 @@
 				Use the controls on ther right to alter the image.
 			</div>
 		</div>
-		<div class="col-md-1 edit-control brightness">
-			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
+		<div class="col-md-1 edit-control">
+			<input type="range" name="slider-fill" id="brightness" class="slider-fill" value="100" min="0" max="100" data-highlight="true" onchange="changeBrightness(this.value)">
 			Brightness
 		</div>
 		<div class="col-md-1 edit-control shadows">
@@ -25,7 +26,7 @@
 			Shadows 
 		</div>
 		<div class="col-md-1 edit-control color">
-			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
+			<input type="range" name="slider-fill" class="slider-fill" value="0" min="0" max="100" data-highlight="true" onChange="tintColor(this.value)">
 			Color
 		</div>
 		<div class="col-md-1 edit-control rotate">
