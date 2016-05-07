@@ -197,7 +197,7 @@ table {
   overflow:hidden;
 }
 
-#image_url {
+.no-display {
   display: none;
 }
 
@@ -214,8 +214,6 @@ canvas {
 	color: white;
 	height: 50px;
 	background-color: #4E365A;
-  position: absolute;
-  bottom: 0;
 }
 
 

@@ -8,7 +8,7 @@
 		Image <div class="white"> Duplicate Detection </div>  
 		Using Neural Networks
 	</div>
-	<input id="image_url" value="yo"> </input>
+	<input id="image_url" class="no-display"> </input>
 
 	<div class="col-md-12 controls">
 		<div class="col-md-6 demo-title">
@@ -26,11 +26,12 @@
 			Shadows 
 		</div>
 		<div class="col-md-1 edit-control color">
-			<input type="range" name="slider-fill" class="slider-fill" value="0" min="0" max="100" data-highlight="true" onChange="tintColor(this.value)">
+			<input type="range" name="slider-fill" id="tint" class="slider-fill" value="0" min="0" max="100" data-highlight="true" onChange="tintColor(this.value)">
 			Color
 		</div>
-		<div class="col-md-1 edit-control rotate">
-			<img src="{% static 'rotate.png' %}" id="rotate-image"> <br>
+		<div class="col-md-1 edit-control">
+			<img src="{% static 'rotate.png' %}" id="rotate-image"  onclick="rotate()"> <br>
+			<input id="rotate" class="no-display" value="0"> </input>
 			Rotate
 		</div>
 	</div>
