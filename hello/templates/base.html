@@ -29,10 +29,10 @@
 		}
 
 		// if image uploaded, change brightness
-	    var amount = value/100.;
 	    var img = document.getElementById('big-photo');
         /* We change the brightness of the canvas itself */
-        img.setAttribute('style', 'filter:brightness(' + amount + '); -webkit-filter:brightness(' + amount + '); -moz-filter:brightness(' + amount + ')');
+        var cssText = getCssText();
+        img.setAttribute('style', cssText);
 	}
 
 	function resetFilter(type) {
@@ -57,26 +57,41 @@
 
     	context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, canvas.width, canvas.height);
 
-		if (type == "tint") {
+		if (type != "brightness") {
 			changeBrightness($("#brightness").val());
 		}
 
 		return "success";
 	}
 
-
-	function rotate() {
+	function clickRotate() {
 		var value = $("#rotate").val();
-		var degrees = -90*value;
 		if (value < 3) {
 			$("#rotate").val(parseInt(value) + 1);
 		} else {
 			$("#rotate").val(0);
 		}
+		rotate();
+	}
 
+	function rotate() {
+		var value = $("#rotate").val();
 		var canvas = document.getElementById('big-photo');
-		canvas.setAttribute('style', '-webkit-transform:rotate(' + degrees + 'deg); -moz-transform:rotate(' + degrees + '); -o-transform:rotate(' + degrees + '); -ms-transform:rotate(' + degrees + ')');
+		var cssText = getCssText();
 
+		canvas.setAttribute('style', cssText);	
+	}
+
+	function getCssText() {
+		return rotateCSS(-90*$("#rotate").val()) + ';' + brightnessCSS($("#brightness").val()/100.);
+	}
+
+	function rotateCSS(degrees) {
+		return '-webkit-transform:rotate(' + degrees + 'deg); -moz-transform:rotate(' + degrees + '); -o-transform:rotate(' + degrees + '); -ms-transform:rotate(' + degrees + ')';
+	}
+
+	function brightnessCSS(amount) {
+		return 'filter:brightness(' + amount + '); -webkit-filter:brightness(' + amount +'); -moz-filter:brightness(' + amount + ')'
 	}
 
 	function tintColor(value) {
@@ -90,7 +105,7 @@
 
 		// return to normal if value is 0
 		if (value == 0) {
-			console.log("back to 0");
+			resetTint(0);
 			return;
 		}
 
@@ -170,6 +185,24 @@
     	return "#" + HEX.R+''+HEX.G+''+HEX.B;
 	}
 
+	function resetRotate(value) {
+		$("#rotate").val(value);
+		rotate();
+	}
+
+	function resetBrightness(value) {
+		$("#brightness").val(value);
+		changeBrightness(value);
+	}
+
+	function resetTint(value) {
+		$("#tint").val(value);
+		var canvas = document.getElementById('big-photo');
+		ctx = canvas.getContext('2d');
+		ctx.globalCompositeOperation = "source-over";
+		ctx.globalAlpha = 1.0;
+	}
+
  	function showImage(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -177,9 +210,11 @@
 			context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
 
-			// reset rotate
-			$("#rotate").val(0);
-
+			// reset values
+			resetRotate(0);
+			resetBrightness(100);
+			resetTint(0);
+			
             reader.onload = function (e) {
             	base_image = new Image();
             	base_image.src = e.target.result;
