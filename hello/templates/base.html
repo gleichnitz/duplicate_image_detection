@@ -11,6 +11,7 @@
 <script>
 
 	window.onload = function() {
+		// loading image at first
 		var canvas = document.getElementById('big-photo');
 		context = canvas.getContext('2d');
 		base_image = new Image();
@@ -18,7 +19,188 @@
 	 	base_image.onload = function(){
 		   context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, 285, 285);
 		}
- 		console.log(base_image.src);
+	}
+
+	function changeBrightness(value) {
+		var image_url = $("#image_url").val();
+		if (image_url == null || image_url == "") {
+			$("#brightness").val(100);
+			return;
+		}
+
+		// if image uploaded, change brightness
+	    var img = document.getElementById('big-photo');
+        /* We change the brightness of the canvas itself */
+        var cssText = getCssText();
+        img.setAttribute('style', cssText);
+	}
+
+	function resetFilter(type) {
+		// resets filter of "type" but keeps other filters
+		var image_url = $("#image_url").val();
+		if (image_url == null || image_url == "") {
+			console.log("no image to tint");
+			return null;
+		}
+
+		// redraw uploaded image
+    	var canvas = document.getElementById('big-photo');
+    	var context = canvas.getContext("2d");
+    	context.clearRect(0, 0, canvas.width, canvas.height);
+		
+		var base_image = new Image();
+    	base_image.onload = function() {
+	       context.drawImage(base_image, 0, 0, canvas.width, canvas.height);
+	    }
+		var old_image_url = window.URL.createObjectURL($(".file-input")[0].files[0])
+    	base_image.src = old_image_url;
+
+    	context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, canvas.width, canvas.height);
+
+		if (type != "brightness") {
+			changeBrightness($("#brightness").val());
+		}
+
+		return "success";
+	}
+
+	function clickRotate() {
+		var value = $("#rotate").val();
+		if (value < 3) {
+			$("#rotate").val(parseInt(value) + 1);
+		} else {
+			$("#rotate").val(0);
+		}
+		rotate();
+	}
+
+	function rotate() {
+		var value = $("#rotate").val();
+		var canvas = document.getElementById('big-photo');
+		var cssText = getCssText();
+
+		canvas.setAttribute('style', cssText);	
+	}
+
+	function getCssText() {
+		return rotateCSS(-90*$("#rotate").val()) + ';' + brightnessCSS($("#brightness").val()/100.);
+	}
+
+	function rotateCSS(degrees) {
+		return '-webkit-transform:rotate(' + degrees + 'deg); -moz-transform:rotate(' + degrees + '); -o-transform:rotate(' + degrees + '); -ms-transform:rotate(' + degrees + ')';
+	}
+
+	function brightnessCSS(amount) {
+		return 'filter:brightness(' + amount + '); -webkit-filter:brightness(' + amount +'); -moz-filter:brightness(' + amount + ')'
+	}
+
+	function tintColor(value) {
+		var img = $(".file-input")[0].files[0];
+
+		// reset tint filter and return if no image
+		if (resetFilter("tint") == null) {
+			$("#tint").val(0);
+			return;
+		}
+
+		// return to normal if value is 0
+		if (value == 0) {
+			resetTint(0);
+			return;
+		}
+
+		hex = color(value);
+		console.log(hex);
+
+		var canvas = document.getElementById('big-photo');
+		ctx = canvas.getContext('2d');
+		var map = ctx.getImageData(0,0,canvas.width,canvas.height);
+	    var imdata = map.data;
+
+	    for (var i = 0; i < imdata.length; i += 4) {
+	      var avg = (imdata[i] + imdata[i +1] + imdata[i +2]) / 3;
+	      imdata[i]     = avg; // red
+	      imdata[i + 1] = avg; // green
+	      imdata[i + 2] = avg; // blue
+	    }
+	    ctx.putImageData(map, 0, 0);
+
+	    // overlay filled rectangle using lighter composition
+	    ctx.globalCompositeOperation = "lighter";
+	    ctx.globalAlpha = 0.5;
+	    ctx.fillStyle=hex;
+	    ctx.fillRect(0,0,canvas.width,canvas.height);
+	}
+
+	function color(val) {
+		value = val/100.
+
+	    var RGB = {R:0,G:0,B:0};
+	    // if value = 0, remove any tint
+	    if (0 < value && value <= 1/8) {
+	        RGB.R = 0;
+	        RGB.G = 0;
+	        RGB.B = 4*value + .5; // .5 - 1 // b = 1/2
+	    } else if (1/8 < value && value <= 3/8) {
+	        RGB.R = 0;
+	        RGB.G = 4*value - .5; // 0 - 1 // b = - 1/2
+	        RGB.B = 1; // small fix
+	    } else if (3/8 < value && value <= 5/8) {
+	        RGB.R = 4*value - 1.5; // 0 - 1 // b = - 3/2
+	        RGB.G = 1;
+	        RGB.B = -4*value + 2.5; // 1 - 0 // b = 5/2
+	    } else if (5/8 < value && value <= 7/8) {
+	        RGB.R = 1;
+	        RGB.G = -4*value + 3.5; // 1 - 0 // b = 7/2
+	        RGB.B = 0;
+	    } else if (7/8 < value && value <= 1) {
+	        RGB.R = -4*value + 4.5; // 1 - .5 // b = 9/2
+	        RGB.G = 0;
+	        RGB.B = 0;
+	    } else if (value > 1) {    // should never happen - value > 1
+	        RGB.R = .5;
+	        RGB.G = 0;
+	        RGB.B = 0;
+	    }
+
+	    // scale for hex conversion
+	    RGB.R *= 255;
+	    RGB.G *= 255;
+	    RGB.B *= 255;
+	    HEX = {R: 0, G: 0, B: 0};
+	    HEX.R = Math.round(RGB.R).toString(16);
+	    HEX.G = Math.round(RGB.G).toString(16);
+	    HEX.B = Math.round(RGB.B).toString(16);
+	    if (HEX.R < 16) {
+	    	HEX.R = "0" + HEX.R;
+	    }
+	    if (HEX.G < 16) {
+	    	HEX.G = "0" + HEX.G;
+	    }
+	    if (HEX.B < 16) {
+	    	HEX.B = "0" + HEX.B;
+	    }
+	    console.log(RGB);
+	    console.log(HEX);
+    	return "#" + HEX.R+''+HEX.G+''+HEX.B;
+	}
+
+	function resetRotate(value) {
+		$("#rotate").val(value);
+		rotate();
+	}
+
+	function resetBrightness(value) {
+		$("#brightness").val(value);
+		changeBrightness(value);
+	}
+
+	function resetTint(value) {
+		$("#tint").val(value);
+		var canvas = document.getElementById('big-photo');
+		ctx = canvas.getContext('2d');
+		ctx.globalCompositeOperation = "source-over";
+		ctx.globalAlpha = 1.0;
 	}
 
  	function showImage(input) {
@@ -26,13 +208,19 @@
             var reader = new FileReader();
             var canvas = document.getElementById('big-photo');
 			context = canvas.getContext('2d');
+			context.clearRect(0, 0, canvas.width, canvas.height);
 
+			// reset values
+			resetRotate(0);
+			resetBrightness(100);
+			resetTint(0);
+			
             reader.onload = function (e) {
             	base_image = new Image();
             	base_image.src = e.target.result;
 		   		context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, canvas.width, canvas.height);
+            	$("#image_url").val(e.target.result);
             };
-
             reader.readAsDataURL(input.files[0]);
         }
     }

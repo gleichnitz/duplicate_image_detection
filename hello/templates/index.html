@@ -8,6 +8,7 @@
 		Image <div class="white"> Duplicate Detection </div>  
 		Using Neural Networks
 	</div>
+	<input id="image_url" class="no-display"> </input>
 
 	<div class="col-md-12 controls">
 		<div class="col-md-6 demo-title">
@@ -16,20 +17,17 @@
 				Use the controls on ther right to alter the image.
 			</div>
 		</div>
-		<div class="col-md-1 edit-control brightness">
-			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
+		<div class="col-md-1 edit-control">
+			<input type="range" name="slider-fill" id="brightness" class="slider-fill" value="100" min="0" max="200" data-highlight="true" onchange="changeBrightness(this.value)">
 			Brightness
 		</div>
-		<div class="col-md-1 edit-control shadows">
-			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
-			Shadows 
-		</div>
 		<div class="col-md-1 edit-control color">
-			<input type="range" name="slider-fill" class="slider-fill" value="50" min="0" max="100" data-highlight="true">
+			<input type="range" name="slider-fill" id="tint" class="slider-fill" value="0" min="0" max="100" data-highlight="true" onChange="tintColor(this.value)">
 			Color
 		</div>
-		<div class="col-md-1 edit-control rotate">
-			<img src="{% static 'rotate.png' %}" id="rotate-image"> <br>
+		<div class="col-md-1 edit-control">
+			<img src="{% static 'rotate.png' %}" id="rotate-image"  onclick="clickRotate()"> <br>
+			<input id="rotate" class="no-display" value="-1"> </input>
 			Rotate
 		</div>
 	</div>
@@ -137,16 +135,16 @@
 	</div>
 	<div class="explanation col-md-12" id="explanation">
 		<div class="question">
-			Why is this important?
+			What was the purpose of this project?
 		</div>
 		<div class="answer">
-			Because I rock
+			Deep convolutional neural networks have led to impressive results on a number of supervised computer vision tasks, most notably object recognition.  Other groups have shown promise in applying neural networks to more fine-grained image classification.  We show that deep neural networks also provide robust near-duplicate detection on images using several generative similarity measures.  We also study scaling neural-network based duplicate detection to a large corpus of images and analyze the trade-off between these strategies and more traditional feature-based methods.
 		</div>
 		<div class="question">
-			Why is this important?
+			How did you train the neural network?
 		</div>
 		<div class="answer">
-			Because I rock
+			We took a base of 10 32x32 images and performed two transformation procedures.  With the standard procedure, we created 1,000 of each image by randomly adjusting brightness, sharpness, contrast, color, rotation, Gaussian blurring, Gaussian noise, and PNG compression.
 		</div>
 	</div>
 	<div class="footer col-md-12">

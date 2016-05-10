@@ -94,8 +94,8 @@ table {
 }
 
 .explanation {
-	height: 300px;
 	padding-top: 50px;
+  padding-bottom: 50px;
 	text-align: left;
 	color: rgba(0, 0, 0, 0.7);
 }
@@ -197,7 +197,11 @@ table {
   overflow:hidden;
 }
 
-#big-photo {
+.no-display {
+  display: none;
+}
+
+canvas {
   flex-shrink:0;
   min-width:100%;
   min-height:100%;
