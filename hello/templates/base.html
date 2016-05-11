@@ -10,15 +10,44 @@
   
 <script>
 
+
+
 	window.onload = function() {
 		// loading image at first
 		var canvas = document.getElementById('big-photo');
 		context = canvas.getContext('2d');
+		canvas.height=32;
+		canvas.width=32;
 		base_image = new Image();
 	 	base_image.src = "{% static 'background.png' %}";
 	 	base_image.onload = function(){
 		   context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, 285, 285);
 		}
+		$('#go-button').click(function() { 
+				var img = document.getElementById('big-photo');
+				sendPicture(img,'image/png',1);
+			}
+		)
+	}
+
+	function sendPicture(image) {
+		dataURL = image.toDataURL();
+		$.ajax({
+  			url: "/guessClass/",
+  			type: "POST",
+  			cache: false,
+  			data: {image: dataURL},
+  			success: function(data){
+  				myarr = data.result;
+  				for (i = 0; i < 6; i++) {
+  					$($('.percentage').get(i)).text(Math.round(myarr[i][0]) + '%');
+  					$($('.match-meter > span').get(i)).width(myarr[i][0]+'%')
+
+  					imageUrl = '../static/img/' + myarr[i][1] + '.png'
+  					$($('.matchbox').get(i)).css('background-image', 'url(' + imageUrl + ')')
+  				}
+ 	 		}
+		});
 	}
 
 	function changeBrightness(value) {
@@ -45,8 +74,10 @@
 
 		// redraw uploaded image
     	var canvas = document.getElementById('big-photo');
+
     	var context = canvas.getContext("2d");
     	context.clearRect(0, 0, canvas.width, canvas.height);
+    	console.log('canvas.width')
 		
 		var base_image = new Image();
     	base_image.onload = function() {

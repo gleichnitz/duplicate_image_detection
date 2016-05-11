@@ -205,14 +205,15 @@ def read_image_unlabeled(filename_queue, raw_img):
 
   # Extract raw JPG data as a string
   # raw_contents = tf.read_file(result.key)
-  raw_contents = raw_img
+  # raw_contents = raw_img
 
   # Decode raw data as a PNG. Defaults to uint8 encoding.
-  result.uint8image = tf.image.decode_png(raw_contents)
+  # result.uint8image = tf.image.decode_png(raw_contents)
+  result.uint8image = raw_img.astype('uint8')
 
   # TENSORFLOW BUG: image shape not statically determined, so force
   # it to have correct CIFAR100 dimensions
-  result.uint8image.set_shape((32, 32, 3))
+  # result.uint8image.set_shape((32, 32, 3))
 
   # Kind of hacky, but set a label so we can use the same structure
   # THIS SHOULD ALWAYS BE IGNORED DURING COMPUTATION, since we are

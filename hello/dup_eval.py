@@ -24,15 +24,15 @@ import time as time
 import numpy as np
 import tensorflow as tf
 
-import dup
+import hello.dup
 
 FLAGS = tf.app.flags.FLAGS
 
-tf.app.flags.DEFINE_string('eval_dir', './tmp/dup_eval',
+tf.app.flags.DEFINE_string('eval_dir', './ckpts/dup_eval',
                            """Directory where to write event logs.""")
 tf.app.flags.DEFINE_string('eval_data', 'train_eval',
                            """Either 'test' or 'train_eval'.""")
-tf.app.flags.DEFINE_string('checkpoint_dir', './ckpts',
+tf.app.flags.DEFINE_string('checkpoint_dir', './hello/ckpts',
                            """Directory where to read model checkpoints.""")
 tf.app.flags.DEFINE_integer('eval_interval_secs', 60 * 1,
                             """How often to run the eval.""")
@@ -144,13 +144,13 @@ def outputpredictions(saver, images_op, prob_op):
 
 def predict(raw_img):
   with tf.Graph().as_default():
-    images,filenames = dup.unlabeled_inputs("none.txt", raw_img)
-    logits = dup.inference(images)
-    probs = dup.predict(logits)
+    images,filenames = hello.dup.unlabeled_inputs("none.txt", raw_img)
+    logits = hello.dup.inference(images)
+    probs = hello.dup.predict(logits)
 
     # Restore the moving average version of the learned variables for eval.
     variable_averages = tf.train.ExponentialMovingAverage(
-        dup.MOVING_AVERAGE_DECAY)
+        hello.dup.MOVING_AVERAGE_DECAY)
     variables_to_restore = variable_averages.variables_to_restore()
     saver = tf.train.Saver(variables_to_restore)
 
@@ -162,20 +162,20 @@ def predict(raw_img):
 def evaluate(testfile):
   """Eval dup for a number of steps."""
   with tf.Graph().as_default():
-    # Get images and labels for dup.
+    # Get images and labels for hello.dup.
     eval_data = FLAGS.eval_data == 'test'
-    images, labels = dup.testing_inputs(testfile)
+    images, labels = hello.dup.testing_inputs(testfile)
 
     # Build a Graph that computes the logits predictions from the
     # inference model.
-    logits = dup.inference(images)
+    logits = hello.dup.inference(images)
 
     # Calculate predictions.
     top_k_op = tf.nn.in_top_k(logits, labels, 1)
 
     # Restore the moving average version of the learned variables for eval.
     variable_averages = tf.train.ExponentialMovingAverage(
-        dup.MOVING_AVERAGE_DECAY)
+        hello.dup.MOVING_AVERAGE_DECAY)
     variables_to_restore = variable_averages.variables_to_restore()
     saver = tf.train.Saver(variables_to_restore)
 

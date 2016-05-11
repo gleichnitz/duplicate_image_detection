@@ -24,8 +24,7 @@ import tarfile
 from six.moves import urllib
 import tensorflow as tf
 
-import dup
-import dup_input
+import hello.dup_input
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -118,14 +117,14 @@ def distorted_inputs(filename):
   if not FLAGS.data_dir:
     raise ValueError('Please supply a data_dir')
   data_dir = os.path.join(FLAGS.data_dir, 'cifar-10-batches-bin')
-  return dup_input.distorted_inputs(filename, data_dir=data_dir,
+  return hello.dup_input.distorted_inputs(filename, data_dir=data_dir,
                                         batch_size=FLAGS.batch_size)
 
 def testing_inputs(filename):
   if not FLAGS.data_dir:
     raise ValueError('Please supply a data_dir')
   data_dir = os.path.join(FLAGS.data_dir, 'cifar-10-batches-bin')
-  return dup_input.testing_inputs(filename, data_dir=data_dir,
+  return hello.dup_input.testing_inputs(filename, data_dir=data_dir,
                                         batch_size=FLAGS.batch_size)
 
 def inputs(eval_data):
@@ -141,14 +140,14 @@ def inputs(eval_data):
   if not FLAGS.data_dir:
     raise ValueError('Please supply a data_dir')
   data_dir = os.path.join(FLAGS.data_dir, 'cifar-10-batches-bin')
-  return dup_input.inputs(eval_data=eval_data, data_dir=data_dir,
+  return hello.dup_input.inputs(eval_data=eval_data, data_dir=data_dir,
                               batch_size=FLAGS.batch_size)
 
 def unlabeled_inputs(filename, raw_img):
   if not FLAGS.data_dir:
     raise ValueError('Please supply a data_dir')
   data_dir = os.path.join(FLAGS.data_dir, 'statefarm-batches-bin')
-  return dup_input.unlabeled_inputs(filename, raw_img, data_dir=data_dir,
+  return hello.dup_input.unlabeled_inputs(filename, raw_img, data_dir=data_dir,
                                         batch_size=FLAGS.batch_size)
 
 def inference(images):
