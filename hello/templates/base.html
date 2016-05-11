@@ -19,6 +19,12 @@
 	 	base_image.onload = function(){
 		   context.drawImage(base_image, 0, 0, base_image.width, base_image.height, 0, 0, 285, 285);
 		}
+		$("#upload-button").click(function() {
+			$(".file-input").click();
+		})
+		$(".file-input").click(function(e) {
+			e.stopImmediatePropagation();
+		})
 	}
 
 	function changeBrightness(value) {
@@ -127,7 +133,7 @@
 
 	    // overlay filled rectangle using lighter composition
 	    ctx.globalCompositeOperation = "lighter";
-	    ctx.globalAlpha = 0.5;
+	    ctx.globalAlpha = 0.3;
 	    ctx.fillStyle=hex;
 	    ctx.fillRect(0,0,canvas.width,canvas.height);
 	}

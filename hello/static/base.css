@@ -67,7 +67,10 @@ table {
   font-size: 20px;
   cursor: pointer;
   opacity: 0;
-  filter: alpha(opacity=0); }
+  filter: alpha(opacity=0); 
+  display: none;
+}
+
 
 .button:hover {
 	background-color: #bbb;
@@ -103,15 +106,15 @@ table {
 .question {
 	font-size: 22px;
 	padding: 10px;
-	padding-left: 30%;
-	padding-right: 30%;
+	padding-left: 20%;
+	padding-right: 20%;
 }
 
 .answer {
 	font-size: 17px;
 	padding: 0px 0px 20px 10px;
-	padding-left: 30%;
-	padding-right: 30%;
+	padding-left: 20%;
+	padding-right: 20%;
 }
 
 .go {
