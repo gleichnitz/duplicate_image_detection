@@ -145,6 +145,8 @@ table {
 	border-radius: 2px;
 	margin: auto;
 	background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .match-meter {
